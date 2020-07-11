@@ -34,8 +34,23 @@ In our version of the game, we will use numbers instead of disks. Therefore, the
 
 - Only towers 1, 2 and 3 can be used.
 
-We will have the user define the quantity of numbers he wants to put on the first tower. All numbers will be of type int. After the user defines the quantity of numbers he wants to place on the first tower, the program will create an array with the size of that quantity. The user will then be prompted to add the numbers they wish to see on the tower. The program will then sort those numbers in the array (smallest to largest) while using one of the methods learned in class (Bubble sort, Selection sort, Insertion sort, Merge sort, etc.).
+Program Core: 
 
-The three towers in our program will be implemented using Stacks (one stack per tower). Starting at the end of the array mentioned above, we will push the elements into the first stack, implementing a tower with the largest number at the bottom and smallest number at the top. The first stack (tower) will be shown to the user before commencing the resolution of the puzzle.
+This program will be composed at least 3 parts: 
+1. the interface part which use JAVA build-in GUI and funciton as the direct interface between player and program
+2. the game body, which composed of the game logic, data manipulaiton using data API, algo for auto_completion , and game statistics. 
+3. the data strcuture part which implement the underline concrete data structure for functioning data API  
 
-There are probably many ways of approaching this puzzle. One idea under investigation is using the concept of trees, which will be implemented via Nodes. Each Node will consist of three stacks, representing each tower. Each Node can branch off to a maximum of 3 Nodes (each Node representing a different scenario of moving one number from one tower to another while following the rules of the game mentioned above). Our program will then go through the tree starting at the root, and find the shortest possible branch it took to achieve the desired solution (all the numbers placed on stack 3 in ascending order, while stacks 1 and 2 are empty). Each node of the said branch will then be placed in a Queue, and our program will print out each Node in this Queue to display to the user the steps to our solution. This is subject to change. 
+1.1 the index for interface 
+    Jpanes to manage window 
+    EventListener for reading action from user and propogate reaction to program 
+    paintComponent to change the state of game and reflect user's aciton 
+    mouseAdaptor to trach and record mouse movement 
+2.1 the index for game body 
+    basic game logic: the rule to move disk and the rule to determine an end of game 
+    data manipulation: define how each stack to work and combined with rule of logic composed the main body of the game 
+    algo for auto_complete: an algo to indicate how to move next next into proper play and also a full auto version which can complete the game by its own. Will use recurion for the task 
+    game stati reflect the conpleteion time, and if use full auto can track the memery useage and cpu time 
+3.1
+    data structure part will use the simplest method, array implementatin to form the fundamental for stack. 
+    std API for portability and simplicity 
