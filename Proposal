@@ -1,0 +1,41 @@
+Project title: Game – Tower of Hanoi solution.
+
+Summary:
+
+- Input: The user defines the numbers they want placed on the first tower (Quantity and numbers themselves).
+
+- Output:
+
+o The numbers placed in ascending order on the first tower.
+
+o Steps on how to move these numbers to the third tower while only using the first, second and third towers and obeying the Tower of Hanoi game rules.
+
+Background:
+
+Our project consists of implementing the solution to the game Tower of Hanoi using numbers. This game is a mathematical puzzle, generally consisting of three towers and a number of disks of different sizes. The user finds themselves with the disks stacked in order per size on the first tower – biggest at the bottom and smallest at the top. The goal of the game is to move the disks from the first tower to the third while obeying the following rules:
+
+- The disks are moved from one tower to another, one disk at a time.
+
+- A disk can only be placed on an empty tower or a larger disk.
+
+- A disk cannot be placed on a smaller one.
+
+- Only towers 1 to 3 can be used.
+
+Description:
+
+In our version of the game, we will use numbers instead of disks. Therefore, the numbers will be placed in ascending order on the first tower. Then our program will show the steps on how to get all the numbers on the third tower while obeying the following rules:
+
+- The numbers are moved from one tower to another, one number at a time.
+
+- A number can only be placed on an empty tower or a larger number.
+
+- A number cannot be placed on a smaller one.
+
+- Only towers 1, 2 and 3 can be used.
+
+We will have the user define the quantity of numbers he wants to put on the first tower. All numbers will be of type int. After the user defines the quantity of numbers he wants to place on the first tower, the program will create an array with the size of that quantity. The user will then be prompted to add the numbers they wish to see on the tower. The program will then sort those numbers in the array (smallest to largest) while using one of the methods learned in class (Bubble sort, Selection sort, Insertion sort, Merge sort, etc.).
+
+The three towers in our program will be implemented using Stacks (one stack per tower). Starting at the end of the array mentioned above, we will push the elements into the first stack, implementing a tower with the largest number at the bottom and smallest number at the top. The first stack (tower) will be shown to the user before commencing the resolution of the puzzle.
+
+There are probably many ways of approaching this puzzle. One idea under investigation is using the concept of trees, which will be implemented via Nodes. Each Node will consist of three stacks, representing each tower. Each Node can branch off to a maximum of 3 Nodes (each Node representing a different scenario of moving one number from one tower to another while following the rules of the game mentioned above). Our program will then go through the tree starting at the root, and find the shortest possible branch it took to achieve the desired solution (all the numbers placed on stack 3 in ascending order, while stacks 1 and 2 are empty). Each node of the said branch will then be placed in a Queue, and our program will print out each Node in this Queue to display to the user the steps to our solution. This is subject to change. 
