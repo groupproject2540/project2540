@@ -9,7 +9,7 @@ This part explains the team algo's job and rough time line.
         1. the basic data strucutre will use 3 stacks to represent 3 rod.
         2. disk size will be represented used integer value
         3. follow the logic of the game, larger integer can not sits on top of smaller int on the rob
-        4. a 4th rod with cap of 1 will temp hold the moving piece before it is dispersed to proper rod.
+        4. a 4th rod with cap of 1 will temp hold the moving piece before it is dispersed to proper rod.  
         5. a recurive algo following the above rule will be written as the fully automatic solution to solve the game
 
 Part2:
