@@ -6,6 +6,9 @@ Overall:
 Part1:
 This part explains the team algo's job and rough time line.
 this file is work on local branch name CadyBranch which is working to track remote branch CadyBranch
+if I cam switch to CadyBranch a simple push will allow the remote to trach this branch
+    it appears that I can not select Cadybranch by git push CadyBranch
+    -> don't know wht
 
 Part2:
 this part explain the team gui's job and time line.
