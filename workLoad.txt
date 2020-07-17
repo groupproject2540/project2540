@@ -5,7 +5,7 @@ Overall:
 
 Part1:
 This part explains the team algo's job and rough time line.
-
+this file is work on local branch name CadyBranch which is working to track remote branch CadyBranch
 
 Part2:
 this part explain the team gui's job and time line.
