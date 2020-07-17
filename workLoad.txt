@@ -1,0 +1,11 @@
+Overall:
+1. how sub_team was formed
+2. what is each team's main responsibility
+
+
+Part1:
+This part explains the team algo's job and rough time line.
+
+
+Part2:
+this part explain the team gui's job and time line.
