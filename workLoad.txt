@@ -1,6 +1,15 @@
 Overall:
 1. how sub_team was formed
+Team algo ：Cady Liu  ID:110027977 
+            Bin zhang(benny)  ID:105046826
+            
+Team GUI : Julia Sabelli  ID:105048031 
+           Ali Saegh  ID:103319692
+
+
 2. what is each team's main responsibility
+Team algo:Basic code writing，include the basic functon and logic，written the fully automatic solution to solve the game
+
 
 
 Part1:
