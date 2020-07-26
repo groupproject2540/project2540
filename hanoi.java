@@ -17,7 +17,7 @@ public class hanoi {  // how hanoi work
  
 	}
  
-	static void hanoi(int n, char a, char b, char c) { 
+	static void hanoi(int n, char from, char pass, char to) { 
 		if (n == 1){  
             System.out.println("n=" + n + " " + a + "-->" + c);  
             s++;
