@@ -49,7 +49,8 @@ public class Stack {
          System.out.println("Stack Overflow"); 
          return false; 
      } 
-     else if(x>a[last]) {
+
+     else if(last!=-1&&x>a[last]) {
     	 System.out.println("Int "+x+" is bigger then then number on top of Stack");   //follow rule
     	 return false;
      }

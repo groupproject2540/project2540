@@ -26,20 +26,31 @@ public class Hanoi{
   
     // fill stack A from 1~n with smaller num on top 
     public void initA(){
-    	for(int i=0;i<A.cap;i++) {
-    		A.a[i]=i+1;
+    	for(int i=0,j=A.cap;i<A.cap;i++,j--) {
+    		A.a[i]=j;
+    		A.last++;
     	}
     }
    
     // recursive mover fucniton see youtube video on how to implement 
-    public void move(int number,Stack from, Stack via, Stack to){
+    public void move(int number,Stack from, Stack pass, Stack to){
     	
     	if (number == 1){
             System.out.println("Disk 1 from "+ from.name + " to " + to.name);
+
+           if(to.push(from.peek())==true) {
+            	from.pop();
+            }
+            
+           
         }else {
-            move(number - 1, from, to, via);
-            System.out.println("Disk "+ number + " from " + from.name + " to " + to.name);
-            move(number - 1, via, from, to);
+            move(number - 1, from, to, pass);
+            System.out.println("Disk "+ number + " from " + from.name + " to " + to.name);    
+           if(to.push(from.peek())==true) {
+        	from.pop();
+        }
+        
+            move(number - 1, pass, from, to);
         }
     }
     	
