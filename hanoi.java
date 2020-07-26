@@ -1,34 +1,58 @@
-package pg;
+package gp;
 
-import java.util.Scanner;
+public class Hanoi{
+    // 3 stack decleared in constructor by disk size 
+    Stack A; 
+    Stack B; 
+    Stack C; 
+   
+    // 2 varaible indicate which disk on which rod is bring moved. GUI team use this to display 
+    char curRod; 
+    int curValue;
 
-public class hanoi {  // how hanoi work
-
-	static long s = 0;
-	 
-	public static void main(String args[]) {
- 
-		int n = 0;
-		Scanner sc = new Scanner(System.in);
-		n = sc.nextInt();//Number of layers
-		System.out.println("Number of layers = " + n);
-		hanoi(n, 'a', 'b', 'c');
-		System.out.println("need " + s+ "step ");
- 
-	}
- 
-	static void hanoi(int n, char from, char pass, char to) { 
-		if (n == 1){  
-            System.out.println("n=" + n + " " + from + "-->" + to);  
-            s++;
+    // contrductor 
+    public Hanoi(int disk){
+    	A=new Stack(disk,'A');
+    	B=new Stack(disk,'B');
+    	C=new Stack(disk,'C');
+    }
+    
+    // default with disk 3 for demo purpose
+    public Hanoi(){
+    	A=new Stack(3,'A');
+    	B=new Stack(3,'B');
+    	C=new Stack(3,'C');
+    }
+  
+    // fill stack A from 1~n with smaller num on top 
+    public void initA(){
+    	for(int i=0;i<A.cap;i++) {
+    		A.a[i]=i+1;
+    	}
+    }
+   
+    // recursive mover fucniton see youtube video on how to implement 
+    public void move(int number,Stack from, Stack via, Stack to){
+    	
+    	if (number == 1){
+            System.out.println("Disk 1 from "+ from.name + " to " + to.name);
+        }else {
+            move(number - 1, from, to, via);
+            System.out.println("Disk "+ number + " from " + from.name + " to " + to.name);
+            move(number - 1, via, from, to);
         }
-		else{  
-            hanoi(n-1,from,to,pass);  
-            System.out.println("n=" + n + " " + from + "-->" + to);  
-            hanoi(n-1,pass,from,to);  
-            s++;
-        }
-	}
+    }
+    	
+
 
 
 }
+    	
+    
+    
+    
+    
+    
+   
+
+
