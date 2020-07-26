@@ -19,13 +19,13 @@ public class hanoi {  // how hanoi work
  
 	static void hanoi(int n, char from, char pass, char to) { 
 		if (n == 1){  
-            System.out.println("n=" + n + " " + a + "-->" + c);  
+            System.out.println("n=" + n + " " + from + "-->" + to);  
             s++;
         }
 		else{  
-            hanoi(n-1,a,c,b);  
-            System.out.println("n=" + n + " " + a + "-->" + c);  
-            hanoi(n-1,b,a,c);  
+            hanoi(n-1,from,to,pass);  
+            System.out.println("n=" + n + " " + from + "-->" + to);  
+            hanoi(n-1,pass,from,to);  
             s++;
         }
 	}
