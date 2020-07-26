@@ -1,81 +1,74 @@
-package stackBasedApplication;
 
-public class Stack_Arr {
+public class Stack{
 
-/* Java program to implement basic stack 
-operations */
-    static final int MAX = 10000; 
-    int size; 
-    int totalSize;
+    /* Java program to implement basic stack 
+       operations */
+    int cap; 
+    int last;
     int a[] ;
-    
-    /** defauly contructor 
-     */
-     public Stack_Arr() 
-    { 
-        size =0;
-        a = new int[100];
-    } 
-     
-     /**
-      * constructor specifically for challege 3 
-      * @param int[] arr
-      * @return
-      */
 
-     public Stack_Arr(int[] arr) {
-    	 	size= arr.length;
-    	 	totalSize=size;
-    	 	a = arr; 
-     } 
-     
-    
+    /** defauly contructor 
+    */
+    public Stack(int cap) 
+    { 
+        this.cap =cap;
+        last = -1;
+        a = new int[cap];
+    } 
+
+    public Stack(){
+        this(10);
+    }
+
+    /**
+     * constructor specifically for challege 3 
+     * @param int[] arr
+     * @return
+     */
+
+    public Stack(int[] arr,int last){
+        cap= arr.length;
+        this.last = last; 
+        a = arr; 
+    } 
+
+    public int size(){
+        return last+1;
+    }
+
     boolean isEmpty() 
     { 
-        return (size < 1); 
+        return (last < 0); 
     } 
 
     boolean push(int x) 
     { 
-        if (size >= (MAX - 1)) { 
+        if (last >= (cap)) { 
             System.out.println("Stack Overflow"); 
             return false; 
         } 
         else { 
-            a[size++] = x; 
+            a[++last] = x; 
             return true; 
         } 
     } 
-  
+
     int pop() 
     { 
-        if (size < 1) { 
-            System.out.println("Stack Underflow"); 
-            return 0; 
-        } 
-        else { 
-            int x = a[--size]; 
-            return x; 
-        } 
+        int x = a[last--]; 
+        return x; 
     } 
-  
+
     int peek() 
     { 
-        if (size < 1) { 
-            System.out.println("Stack Underflow"); 
-            return 0; 
-        } 
-        else { 
-            int x = a[size-1]; 
-            return x; 
-        } 
+        return a[last]; 
     } 
-    
+
     public String toString() {
-    String result= " "; 
-    for(int i = totalSize-1; i>=0;i-- ) {
-    	result = result + a[i] + " ";
-    }
-     return result;	
+        String result= "top| "; 
+        for(int i =last; i>=0 ;i-- ) {
+            result = result + a[i] + " ";
+        }
+        return result+ " |bottom";	
     }
 }
