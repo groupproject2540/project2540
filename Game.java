@@ -9,6 +9,26 @@ public class Game {
 		int number = sc.nextInt();
 		Hanoi game = new Hanoi(number);
 		game.initA();
-		game.move(number, game.A, game.B, game.C);
+		while(true) {
+		System.out.println("1.Start paly\n2.Check ans\n3.Exit");
+		int c =sc.nextInt();
+		switch(c) {
+		case 1:
+			game.playpart(number);	
+			break;
+							
+		case 2:
+			int step=game.move(number, game.A, game.B, game.C);
+			System.out.println("Use "+step+" step");
+			break;
+			
+		case 3:
+			System.out.println("byby");
+			return;
+		
+		default:
+			System.out.println("error, wrong input");
+		}
+	 }
 	}
 }
