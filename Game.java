@@ -9,17 +9,21 @@ public class Game {
 		int number = sc.nextInt();
 		Hanoi game = new Hanoi(number);
 		game.initA();
+		/*
 		while(true) {
-		System.out.println("1.Start paly\n2.Check ans\n3.Exit");
+	 	System.out.println("1.Start paly\n2.Check ans\n3.Exit");
+
 		int c =sc.nextInt();
 		switch(c) {
 		case 1:
 			game.playpart(number);	
+			game.f5();
 			break;
 							
 		case 2:
-			int step=game.move(number, game.A, game.B, game.C);
-			System.out.println("Use "+step+" step");
+			int st=game.move(number, game.A, game.B, game.C);
+			System.out.println("Use "+st+" step\n");
+			game.f5(); //reset all stack
 			break;
 			
 		case 3:
@@ -30,5 +34,10 @@ public class Game {
 			System.out.println("error, wrong input");
 		}
 	 }
+	 */
+		int st=game.move(number, game.A, game.B, game.C);
+		System.out.println("Use "+st+" step\n");
+		return;
+		
 	}
 }

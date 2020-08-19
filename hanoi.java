@@ -39,25 +39,28 @@ public class Hanoi{
     	int step=0;
     	if (number == 1){
             System.out.println("Disk 1 from "+ from.name + " to " + to.name);
-            step++;
            if(to.push(from.peek())==true) {
             	from.pop();
+                step++;
             }
+           displayall();
             
            
         }else {
             move(number - 1, from, to, pass);
             System.out.println("Disk "+ number + " from " + from.name + " to " + to.name);    
-            step++;
            if(to.push(from.peek())==true) {
         	from.pop();
+            step++;
         }
+           displayall();
         
             move(number - 1, pass, from, to);
         }
     	return step;
     }
     	
+/*  play part
     public void playpart(int number) {
     	Scanner sc = new Scanner (System.in);
     	int step=0;
@@ -155,7 +158,7 @@ public class Hanoi{
     	
     }
     
-    
+   */ 
     
     
     public Boolean checkwin(){  //check if win or not
@@ -190,6 +193,7 @@ public class Hanoi{
     	for(int i=0;i<=A.last;i++) {
     		System.out.print(A.a[i]+" ");
     	}
+    	System.out.println();
     	System.out.println();
     }
 
