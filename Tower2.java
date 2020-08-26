@@ -202,17 +202,17 @@ public class Tower2 extends JFrame {
     getContentPane().add(A0);
 
 
-    Tower1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project/Tower.png"))); // NOI18N
+    Tower1.setIcon(new javax.swing.ImageIcon(getClass().getResource("Tower.png"))); // NOI18N
     Tower1.setText("Tower1");
     getContentPane().add(Tower1);
     Tower1.setBounds(10, 110, 350, 380);
 
-    Tower2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project/Tower.png"))); // NOI18N
+    Tower2.setIcon(new javax.swing.ImageIcon(getClass().getResource("Tower.png"))); // NOI18N
     Tower2.setText("Tower2");
     getContentPane().add(Tower2);
     Tower2.setBounds(380, 110, 350, 380);
 
-    Tower3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/project/Tower.png"))); // NOI18N
+    Tower3.setIcon(new javax.swing.ImageIcon(getClass().getResource("Tower.png"))); // NOI18N
     Tower3.setText("Tower3");
     getContentPane().add(Tower3);
     Tower3.setBounds(750, 110, 350, 380);
